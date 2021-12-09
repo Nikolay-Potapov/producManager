@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>ru.netology</groupId>
-    <artifactId>statistics</artifactId>
+    <groupId>org.example</groupId>
+    <artifactId>Java_3_4oop</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -21,14 +21,7 @@
             <version>5.8.1</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.22</version>
-            <scope>provided</scope>
-        </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -45,21 +38,21 @@
                 <version>0.8.5</version>
                 <executions>
                     <execution>
-                        <id>prepare-agent</id>
+                        <id>agent_3.4</id>
                         <phase>initialize</phase>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
                     </execution>
                     <execution>
-                        <id>report</id>
+                        <id>report_3.4</id>
                         <phase>verify</phase>
                         <goals>
                             <goal>report</goal>
                         </goals>
                     </execution>
                     <execution>
-                        <id>check</id>
+                        <id>check_3.4</id>
                         <goals>
                             <goal>check</goal>
                         </goals>
@@ -68,11 +61,12 @@
                 <configuration>
                     <rules>
                         <rule>
+                            <element>BUNDLE</element>
                             <limits>
                                 <limit>
-                                    <counter>INSTRUCTION</counter>
+                                    <counter>BRANCH</counter>
                                     <value>COVEREDRATIO</value>
-                                    <minimum>1.00</minimum>
+                                    <minimum>1.0</minimum>
                                 </limit>
                             </limits>
                         </rule>
